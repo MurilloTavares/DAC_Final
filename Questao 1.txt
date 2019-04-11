@@ -1,0 +1,8 @@
+- Statefull Session Bean:
+Funciona como uma sessão de um usuário. Guarda um estado conversacional entre o cliente e o Bean. Seu estado de vida passa entre as fazes de criado e não criado. Quando um Session Bean é criado, o método @PostConstruct é chamado e quando é destruido o @PostDestroy.
+
+- Stateless Session Bean:
+Não guarda um estado conversacional, o container EJB armazena um pool de instancias, definindo quando novas intancias devem ser criadas. Semelhante ao Statefull, quando o Bean é criado o método @PostConstruct é chamado e quando é destruido o @PostDestroy, porém, ele também possui seu estado de passivação quando o container resolve armazenar a instancia no pool, chamando o método @PostPassivate, quando o container recupera a instancia para a memória, é chamado o método @PostActivate.
+
+- Singleton Session Bean:
+O Singleton session
