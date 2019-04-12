@@ -9,12 +9,16 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
 @IdClass(TransportePK.class)
+@NamedQuery(name = "AcimaMedia",
+        query = "SELECT t FROM Transporte t WHERE t.valor >"
+                + " SELECT AVG(q.valor) FROM Transporte qGROUP BY q.valor")
 public class Transporte implements Serializable {
     
     @Id
