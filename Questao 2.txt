@@ -1,0 +1,4 @@
+Uma entidade no mundo relacional é definida através dos conceitos de identidade, granularidade, transacionalidade e <?>, além de possuir os relacionamentos 1-1, 1-N e N-N. Em JPA os relacionamentos podem ser OneToOne, OneToMany, ManyToOne e ManyToMany, além de poder ser unidirecional, onde apenas uma classe possuí conhecimento da outra classe relacionada, ou bidireciona, em que as duas classes tem referência para a outra classe.
+- Os relacionamentos OneToOne são semelhantes ao 1-1, onde uma entidade se relaciona com apenas outra entidade, e a chave primária de uma pode ser passada como chave primária para a outra.
+- Os relacionamentos OneToMany e ManyToOne são semelhantes ao 1-N, porém no JPA, o que os diferencia é quem possui a referência para a outra classe.
+- Os relacionamentos ManyToMany são semelhates aos relacionamentos N-N, onde é gerada uma nova tabela para armazenar o relacionamento.
